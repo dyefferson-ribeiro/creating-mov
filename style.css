@@ -19,8 +19,17 @@ section {
 
 p.titulo {
     font-size: 100px;
-    color: white;
+    color: black;
     padding: 20px;
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+}
+
+/* Mantém o título da identidade branco, sem contorno */
+section.identidade p.titulo {
+    color: white;
+    -webkit-text-stroke: 0px;
+    text-stroke: 0px;
 }
 
 /* Animação para transicionar entre itálico e normal */
