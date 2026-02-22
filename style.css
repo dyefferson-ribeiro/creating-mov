@@ -23,6 +23,60 @@ p.titulo {
     padding: 20px;
 }
 
+/* Animação para transicionar entre itálico e normal */
+@keyframes italicoNormal {
+    0%, 50% {
+        font-style: normal;
+    }
+    50%, 100% {
+        font-style: italic;
+    }
+}
+
+/* Aplica animação apenas na parte "VÍDEOS QUE CONECTAM" */
+.animado {
+    animation: italicoNormal 1.7s infinite;
+}
+
+/* Animação para "TRANSFORMANDO" - sobe e desce suavemente */
+@keyframes transformandoAnimado {
+    0% {
+        color: white;
+        -webkit-text-stroke: 0px;
+        text-stroke: 0px;
+        transform: translateY(0);
+    }
+    25% {
+        color: white;
+        -webkit-text-stroke: 0px;
+        text-stroke: 0px;
+        transform: translateY(-15px);
+    }
+    50% {
+        color: black;
+        -webkit-text-stroke: 1px white;
+        text-stroke: 1px white;
+        transform: translateY(-20px);
+    }
+    75% {
+        color: white;
+        -webkit-text-stroke: 0px;
+        text-stroke: 0px;
+        transform: translateY(-15px);
+    }
+    100% {
+        color: white;
+        -webkit-text-stroke: 0px;
+        text-stroke: 0px;
+        transform: translateY(0);
+    }
+}
+
+.transformando-animado {
+    animation: transformandoAnimado 4s ease-in-out infinite;
+    display: inline-block;
+}
+
 div.texto {
     padding: 20px;
     width: 100%;
@@ -182,6 +236,47 @@ div.crew img{
     height: 600px;
     border: solid white 0.5px;
 }
+
+.integ{ 
+    position: relative;
+}
+
+.member{ 
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.integ:hover .member {
+    transform: scale(1.08);
+    z-index: 2;
+    position: relative;
+}
+
+.descricao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 10%;
+    color: white;
+    text-align: center;
+    pointer-events: none;
+    /* background: rgba(0, 0, 0, 0.6); escurece a imagem */
+}
+
+.descricao h3 {
+    margin-bottom: 1%;
+    font-size: 1.5rem;
+    font-family: "Cormorant", serif;
+}
+
+
 
 /*--------------------- INFOS --------------------*/
 
